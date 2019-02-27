@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: provider-demo
+server:
+  port: 8078
