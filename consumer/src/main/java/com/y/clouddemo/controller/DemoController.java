@@ -1,5 +1,6 @@
 package com.y.clouddemo.controller;
 
+import com.y.clouddemo.config.HomeClient;
 import com.y.clouddemo.service.RibbonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,8 @@ public class DemoController {
     RestTemplate restTemplate;
     @Autowired
     private RibbonService ribbonService;
+    @Autowired
+    private HomeClient homeClient;
 
     @GetMapping(value = "/test")
     public String test(){
@@ -22,7 +25,12 @@ public class DemoController {
     }
 
     @GetMapping("/demo")
-    public String demo(@RequestParam(required = false,defaultValue = "cralor") String a){
+    public String demo(@RequestParam(required = false,defaultValue = "demo") String a){
         return ribbonService.demo(a);
+    }
+
+    @GetMapping(value = "/feign")
+    public String feign() {
+        return  homeClient.feign();
     }
 }

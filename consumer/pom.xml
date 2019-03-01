@@ -30,19 +30,16 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-ribbon</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
         </dependency>
     </dependencies>
 
     <build>
+        <finalName>consumer</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

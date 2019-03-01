@@ -28,4 +28,10 @@ public class DemoController {
         log.info("2222222");
         return "-----------"+a+port;
     }
+
+    @GetMapping("/feign")
+    public String feign(){
+        log.info("2222222");
+        return "-----------feign"+port;
+    }
 }
