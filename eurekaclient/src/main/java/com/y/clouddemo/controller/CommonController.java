@@ -50,4 +50,11 @@ public class CommonController {
         return "-----------"+a+port;
     }
 
+    @GetMapping("/feign")
+    public String feign() throws InterruptedException {
+        Thread.sleep(6000);
+        log.info("111111111");
+        return "-----------feign"+port;
+    }
+
 }

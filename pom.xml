@@ -9,7 +9,7 @@
 		<module>eurekaclient</module>
 		<module>eurekaclient2</module>
         <module>consumer</module>
-        <module>eurekaserver2</module>
+        <module>eurekaprovider1</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
